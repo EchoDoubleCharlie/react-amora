@@ -8,7 +8,7 @@ export const AboutMe = () => {
         <h2 className={styles.title}>About Me</h2>
         <p className={styles.description}>
           I'm Al-Yashier Amora, an aspiring IT professional passionate about computer hardware servicing. 
-          I enjoy maintaining and optimizing computer systems to ensure peak performance.
+          I enjoy maintaining and optimizing computer systems to ensure peak performance. Thank you!
         </p>
       </div>
       <div className={styles.topBlur} />
