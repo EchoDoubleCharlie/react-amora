@@ -1,5 +1,6 @@
 @import "../../vars.css";
 
+
 .container {
   margin-top: 80px; /* Push hero section below navbar */
   padding: 49px 10%;
@@ -18,6 +19,7 @@
   z-index: 1;
 }
 
+/* Title Animation */
 .title {
   font-size: 72px;
   font-weight: 900;
@@ -26,26 +28,61 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
 }
 
+/* Description Animation */
 .description {
   font-size: 30px;
   font-family: var(--font-roboto);
   margin-bottom: 52px;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out 0.3s forwards;
 }
 
+/* Keyframes for Title & Description */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating Animation for Hero Image */
 .heroImg {
   width: 50%;
   z-index: 1;
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite, fadeIn 1s ease-in-out forwards;
   border-radius: 50%;
   box-shadow: 0 0 20px 5px #00e6e6, 0 0 40px 10px #00cccc, 0 0 60px 15px #00b3b3;
 }
 
+/* Floating Effect */
 @keyframes floating {
   0% { transform: translateY(0); }
   50% { transform: translateY(10px); }
   100% { transform: translateY(0); }
+}
+
+/* Fade-in Effect for Hero Image */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .topBlur,
@@ -73,6 +110,7 @@
   height: 100vh;
 }
 
+/* Responsive Design */
 @media (max-width: 830px) {
   .container {
     flex-direction: column-reverse;

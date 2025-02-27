@@ -1,4 +1,6 @@
-@import "../vars.css";
+@import "/src/vars.css";
+
+
 
 .navbar {
   display: flex;

@@ -1,13 +1,13 @@
-@import "../vars.css";
+@import "/src/vars.css";
 
 .container {
   position: relative;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 49px 10%;
-  min-height: calc(100vh); /* Adjust based on footer height */
+  min-height: calc(100vh);
   text-align: center;
   z-index: 1;
 }
@@ -20,21 +20,55 @@
   z-index: 1;
 }
 
+/* Title Animation */
 .title {
-  font-size: 60px; /* Slightly smaller than Hero */
+  font-size: 60px;
   font-weight: 900;
   margin-bottom: 20px;
   font-family: var(--font-roboto);
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out forwards;
 }
 
+/* Description Animation */
 .description {
   font-size: 24px;
   font-family: var(--font-roboto);
-  max-width: 800px; /* Keeps the text readable */
+  max-width: 800px;
   line-height: 1.5;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease-out 0.3s forwards;
+}
+
+
+/* Keyframes for Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .topBlur,
@@ -62,13 +96,10 @@
   height: 250px;
 }
 
+/* Responsive Design */
 @media (max-width: 830px) {
   .container {
     padding: 30px 5%;
-  }
-
-  .content {
-    align-items: center;
   }
 
   .title {
@@ -77,5 +108,9 @@
 
   .description {
     font-size: 20px;
+  }
+
+  .runningImg {
+    max-width: 100%;
   }
 }
