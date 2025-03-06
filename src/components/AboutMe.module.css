@@ -1,116 +1,45 @@
 @import "/src/vars.css";
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 49px 10%;
-  min-height: calc(100vh);
+  padding: 100px 10%;
   text-align: center;
-  z-index: 1;
+  min-height: 100vh;
 }
 
-.content {
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+
+.aboutList {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.aboutItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
   color: var(--color-text);
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
 }
 
-/* Title Animation */
-.title {
-  font-size: 60px;
-  font-weight: 900;
-  margin-bottom: 20px;
-  font-family: var(--font-roboto);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 1s ease-out forwards;
-}
-
-/* Description Animation */
-.description {
-  font-size: 24px;
-  font-family: var(--font-roboto);
-  max-width: 800px;
-  line-height: 1.5;
-  
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 1s ease-out 0.3s forwards;
-}
-
-
-/* Keyframes for Animation */
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.topBlur,
-.bottomBlur {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  top: 0;
-  right: 0;
-  border-radius: 0;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
-}
-
-.topBlur {
-  top: -128px;
-  left: -10vw;
-}
-
-.bottomBlur {
-  top: 246px;
-  right: -25vw;
-  min-height: 250px;
-  height: 250px;
-}
-
-/* Responsive Design */
-@media (max-width: 830px) {
-  .container {
-    padding: 30px 5%;
-  }
-
-  .title {
-    font-size: 48px;
-  }
-
-  .description {
-    font-size: 20px;
-  }
-
-  .runningImg {
-    max-width: 100%;
-  }
+.icon {
+  color: var(--color-primary);
 }
