@@ -1,7 +1,5 @@
 @import "/src/vars.css";
 
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,6 +20,7 @@
   color: var(--color-text);
 }
 
+/* Default Nav Links for Desktop */
 .navLinks {
   display: flex;
   list-style: none;
@@ -40,4 +39,39 @@
 
 .navLinks a:hover {
   color: var(--color-primary);
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: var(--color-dark);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navLinks.active {
+    display: flex; /* Show on toggle */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .navLinks li {
+    margin: 10px 0;
+    text-align: center;
+  }
 }
