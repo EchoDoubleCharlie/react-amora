@@ -26,20 +26,28 @@
   align-items: center;
   gap: 15px;
   margin-top: 20px;
+  width: 100%;
 }
 
 .aboutItem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  color: var(--color-text);
+  width: 100%;
+  max-width: 350px; /* Ensures consistent width */
   background: rgba(255, 255, 255, 0.1);
   padding: 10px 20px;
   border-radius: 10px;
-  width: fit-content;
+  box-sizing: border-box;
 }
 
 .icon {
-  color: var(--color-primary);
+  width: 30px;      /* Fixed size for consistency */
+  min-width: 30px;  /* Prevents shrinking */
+  text-align: center;
 }
+
+.aboutItem span {
+  flex: 1; /* Ensures the text fills the remaining space */
+  text-align: left; /* Align text properly */
+}
+

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Skills.module.css";
-import { Wrench, Cpu, Network, HardDriveDownload, Trash2, Settings } from "lucide-react"; 
+import { Wrench, Cpu, Network, Trash2, Settings } from "lucide-react"; 
 
 export const Skills = () => {
   return (
@@ -9,23 +9,23 @@ export const Skills = () => {
       <div className={styles.skillsGrid}>
         <div className={styles.skillCard}>
           <Wrench size={40} className={styles.skillIcon} />
-          <p>Hardware Troubleshooting</p>
+          <span>Hardware Troubleshooting</span>
         </div>
         <div className={styles.skillCard}>
           <Cpu size={40} className={styles.skillIcon} />
-          <p>PC Repair & Maintenance</p>
+          <span>PC Repair & Maintenance</span>
         </div>
         <div className={styles.skillCard}>
           <Network size={40} className={styles.skillIcon} />
-          <p>Basic Network Cable Management</p>
+          <span>Basic Network Cable Management</span>
         </div>
         <div className={styles.skillCard}>
           <Trash2 size={40} className={styles.skillIcon} />
-          <p>Junk File Cleanup & Optimization</p>
+          <span>Junk File Cleanup & Optimization</span>
         </div>
         <div className={styles.skillCard}>
           <Settings size={40} className={styles.skillIcon} />
-          <p>System Maintenance</p>
+          <span>System Maintenance</span>
         </div>
       </div>
     </div>

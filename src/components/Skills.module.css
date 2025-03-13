@@ -16,18 +16,20 @@
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px;
-  justify-items: center;
+  justify-items: start; /* Align cards to the start */
 }
 
 .skillCard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  align-items: center;  /* Align icons and text side by side */
+  gap: 15px;
+  padding: 15px 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  width: 100%; /* Uniform card size */
+  box-sizing: border-box;
   transition: transform 0.3s ease;
 }
 
@@ -36,6 +38,13 @@
 }
 
 .skillIcon {
+  flex-shrink: 0; /* Prevents icons from resizing */
+  width: 40px;    /* Fixed icon size */
+  height: 40px;   /* Ensures consistent height */
   color: var(--color-primary);
-  margin-bottom: 10px;
+}
+
+.skillCard span {
+  text-align: left; /* Align text properly */
+  flex: 1; /* Ensures text takes remaining space */
 }
