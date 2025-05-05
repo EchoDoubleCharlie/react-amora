@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.logo}>My Portfolio</h1>
+      <h1 className={styles.logo}>Ashier-Portfolio</h1>
 
       {/* Hamburger Button */}
       <div className={styles.hamburger} onClick={toggleMenu}>
@@ -21,8 +21,13 @@ export const Navbar = () => {
       <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
         <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
         <li><Link to="/about" onClick={toggleMenu}>About Me</Link></li>
-        <li><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
+        <li><Link to="/blogpost" onClick={toggleMenu}>Blog Post</Link></li>
         <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+        <li><Link to="/experience" onClick={toggleMenu}>Experience</Link></li>
+        <li><Link to="/skills" onClick={toggleMenu}>Skills</Link></li>
+
+
+
       </ul>
     </nav>
   );
