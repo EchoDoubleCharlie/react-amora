@@ -1,0 +1,74 @@
+@import "/src/vars.css";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: var(--color-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+}
+
+.navLinks li {
+  margin: 0 15px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: var(--color-primary);
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; 
+    flex-direction: column;
+    background-color: var(--color-dark);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navLinks.active {
+    display: flex; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  .navLinks li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}

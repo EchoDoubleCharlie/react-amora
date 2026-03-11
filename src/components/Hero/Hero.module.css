@@ -1,0 +1,64 @@
+@import "../../vars.css";
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 120px 10%; 
+  gap: 40px; 
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.heroImg {
+  width: 300px; 
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #00e6e6, 0 0 40px 10px #00cccc, 0 0 60px 15px #00b3b3;
+  animation: floating 3s ease-in-out infinite;
+  filter: none;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .heroImg {
+    width: 200px; 
+  }
+}
+
