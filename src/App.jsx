@@ -10,7 +10,7 @@ import { Projects } from "./components/Projects";
 
 function App() {
   return (
-    <Router basename="/react-portfolio">
+   <Router basename="/react-portfolio">
       <div className={styles.App}>
         <Navbar />
         <Routes>

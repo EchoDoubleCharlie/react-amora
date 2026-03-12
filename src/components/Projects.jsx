@@ -7,7 +7,7 @@ const projects = [
     description: "A personal portfolio website built with React and Vite, showcasing skills and experience. Created for academic purpose.",
     tags: ["React", "Vite", "CSS Modules"],
     github: "https://github.com/EchoDoubleCharlie/react-amora.git",
-    live: "https://echodoublecharlieact-amora",
+    live: "https://amora-portfolio.netlify.app/",
   },
 ];
 
