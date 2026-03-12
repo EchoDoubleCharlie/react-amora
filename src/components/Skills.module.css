@@ -8,6 +8,7 @@
   background: radial-gradient(ellipse 80% 60% at 50% 40%, #0a1628 0%, #060a10 60%, #000000 100%);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .container::before {

@@ -7,11 +7,13 @@ import { Contact } from "./components/Contact";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
+import { MatrixRain } from "./components/MatrixRain/MatrixRain";
 
 function App() {
   return (
     <Router>
       <div className={styles.App}>
+        <MatrixRain />
         <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />

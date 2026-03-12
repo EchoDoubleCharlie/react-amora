@@ -71,27 +71,29 @@
   font-size: 1.3rem;
   color: #00d2e6;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 1200;
   transition: transform 0.3s ease;
 }
 
+/* ── OVERLAY — always in DOM, hidden by default ── */
 .overlay {
-  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 1050;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-.overlay.activeOverlay {
+.activeOverlay {
   opacity: 1;
+  pointer-events: all;
 }
 
+/* ── SIDEBAR — always in DOM, hidden off-screen ── */
 .sidebar {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -100,6 +102,7 @@
   background: #060a10;
   border-left: 1px solid rgba(0, 210, 230, 0.12);
   z-index: 1100;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3rem 2.5rem;
@@ -108,7 +111,7 @@
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sidebar.activeSidebar {
+.activeSidebar {
   transform: translateX(0);
 }
 
@@ -122,6 +125,19 @@
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0, 210, 230, 0.08) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.sidebarLogo {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
 }
 
 .sidebarLinks {
@@ -169,19 +185,17 @@
   opacity: 1;
 }
 
-.sidebarLogo {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 3rem;
+/* ── DESKTOP: hide hamburger, show nav links ── */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .navLinks {
+    display: flex;
+  }
 }
 
+/* ── MOBILE: show hamburger, hide nav links ── */
 @media (max-width: 768px) {
   .navLinks {
     display: none;
@@ -189,13 +203,5 @@
 
   .hamburger {
     display: block;
-  }
-
-  .overlay {
-    display: block;
-  }
-
-  .sidebar {
-    display: flex;
   }
 }
