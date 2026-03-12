@@ -10,7 +10,7 @@ import { Projects } from "./components/Projects";
 
 function App() {
   return (
-   <Router basename="/react-portfolio">
+    <Router>
       <div className={styles.App}>
         <Navbar />
         <Routes>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experience />} />
-           <Route path="/Projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
     </Router>
