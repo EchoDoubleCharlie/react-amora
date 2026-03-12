@@ -5,7 +5,10 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hola! I'm Al-Yashier Amora</h1>
+        <h1 className={styles.title}>
+  <span className={styles.firstLine}>Al-Yashier</span>
+  Amora
+</h1>
         <p className={styles.description}>
           I'm a WMSU college student studying Bachelor of Science in Information Technology.
           I specialize in computer hardware servicing and basic network cable management.

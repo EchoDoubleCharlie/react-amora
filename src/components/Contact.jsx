@@ -14,7 +14,7 @@ export const Contact = () => {
       <div className={styles.contactList}>
         <div className={styles.contactItem}>
           <FaEnvelope className={styles.icon} />
-          <span>Email: amoraalyashier00@gmail.com</span>
+         <span className={styles.lowercase}>email: amoraalyashier00@gmail.com</span>
         </div>
         <div className={styles.contactItem}>
           <FaPhone className={styles.icon} />

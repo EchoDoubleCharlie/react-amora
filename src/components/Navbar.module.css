@@ -5,70 +5,201 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background-color: var(--color-dark);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(6, 10, 16, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 210, 230, 0.08);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--color-text);
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navLinks {
   display: flex;
   list-style: none;
-}
-
-.navLinks li {
-  margin: 0 15px;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navLinks a {
   text-decoration: none;
-  color: var(--color-text);
-  font-size: 18px;
-  transition: color 0.3s ease-in-out;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(220, 235, 240, 0.55);
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+/* Underline hover effect */
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: #00d2e6;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navLinks a:hover {
-  color: var(--color-primary);
+  color: rgba(220, 235, 240, 1);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
 }
 
 .hamburger {
   display: none;
-  font-size: 28px;
-  color: var(--color-text);
+  font-size: 1.3rem;
+  color: #00d2e6;
   cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+/* ── SIDEBAR OVERLAY ── */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1050;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.activeOverlay {
+  opacity: 1;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: #060a10;
+  border-left: 1px solid rgba(0, 210, 230, 0.12);
+  z-index: 1100;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar.activeSidebar {
+  transform: translateX(0);
+}
+
+/* Glow orb inside sidebar */
+.sidebar::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 210, 230, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarLinks li {
+  border-bottom: 1px solid rgba(0, 210, 230, 0.07);
+}
+
+.sidebarLinks a {
+  display: block;
+  padding: 1.1rem 0;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(220, 235, 240, 0.55);
+  transition: color 0.25s ease, padding-left 0.25s ease;
+  position: relative;
+}
+
+.sidebarLinks a::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #00d2e6;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.sidebarLinks a:hover {
+  color: rgba(220, 235, 240, 1);
+  padding-left: 1.4rem;
+}
+
+.sidebarLinks a:hover::before {
+  opacity: 1;
+}
+
+.sidebarLogo {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 768px) {
   .navLinks {
-    display: none; 
-    flex-direction: column;
-    background-color: var(--color-dark);
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .navLinks.active {
-    display: flex; 
+    display: none;
   }
 
   .hamburger {
-    display: block; 
+    display: block;
   }
 
-  .navLinks li {
-    margin: 10px 0;
-    text-align: center;
+  .overlay {
+    display: block;
+  }
+
+  .sidebar {
+    display: flex;
   }
 }
