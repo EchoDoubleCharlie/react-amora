@@ -49,7 +49,6 @@
   position: relative;
 }
 
-/* Underline hover effect */
 .navLinks a::after {
   content: '';
   position: absolute;
@@ -76,7 +75,6 @@
   transition: transform 0.3s ease;
 }
 
-/* ── SIDEBAR OVERLAY ── */
 .overlay {
   display: none;
   position: fixed;
@@ -92,7 +90,6 @@
   opacity: 1;
 }
 
-/* ── SIDEBAR ── */
 .sidebar {
   display: none;
   position: fixed;
@@ -115,7 +112,6 @@
   transform: translateX(0);
 }
 
-/* Glow orb inside sidebar */
 .sidebar::before {
   content: '';
   position: absolute;

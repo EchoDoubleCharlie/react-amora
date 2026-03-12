@@ -10,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Grid background */
 .container::before {
   content: '';
   position: absolute;
@@ -23,7 +22,6 @@
   pointer-events: none;
 }
 
-/* Glow orb */
 .container::after {
   content: '';
   position: absolute;
@@ -77,7 +75,6 @@
   cursor: default;
 }
 
-/* Left accent line sweep */
 .skillCard::before {
   content: '';
   position: absolute;

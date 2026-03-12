@@ -27,13 +27,11 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Overlay */}
       <div
         className={`${styles.overlay} ${isOpen ? styles.activeOverlay : ""}`}
         onClick={closeMenu}
       />
 
-      {/* Sidebar */}
       <div className={`${styles.sidebar} ${isOpen ? styles.activeSidebar : ""}`}>
         <div className={styles.sidebarLogo}>Amora Portfolio</div>
         <ul className={styles.sidebarLinks}>

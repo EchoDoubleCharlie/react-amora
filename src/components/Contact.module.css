@@ -142,7 +142,6 @@
   color: rgba(220, 235, 240, 1);
 }
 
-/* Email stays lowercase */
 .lowercase {
   text-transform: lowercase !important;
 }

@@ -10,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Grid background */
 .experienceSection::before {
   content: '';
   position: absolute;
@@ -45,7 +44,6 @@
   background-clip: text;
 }
 
-/* Timeline line */
 .experienceList {
   display: flex;
   flex-direction: column;
@@ -73,7 +71,6 @@
   padding-bottom: 0;
 }
 
-/* Timeline dot */
 .experienceItem::before {
   content: '';
   position: absolute;

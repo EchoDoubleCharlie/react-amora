@@ -10,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Grid background */
 .container::before {
   content: '';
   position: absolute;
@@ -23,7 +22,6 @@
   pointer-events: none;
 }
 
-/* Glow orb */
 .container::after {
   content: '';
   position: absolute;
@@ -74,7 +72,6 @@
   overflow: hidden;
 }
 
-/* Top accent line on card */
 .projectCard::before {
   content: '';
   position: absolute;
