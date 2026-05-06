@@ -9,6 +9,13 @@ const projects = [
     github: "https://github.com/EchoDoubleCharlie/react-amora.git",
     live: "https://amora-portfolio.netlify.app/",
   },
+  {
+    title: "DOIT. Task Manager",
+    description: "A sleek dark-mode task manager built with React. Features priority levels, filters, progress tracking, and local storage persistence.",
+    tags: ["React", "CSS", "localStorage"],
+    github: "https://github.com/EchoDoubleCharlie/doit-app",
+    live: "",
+  },
 ];
 
 export const Projects = () => {
