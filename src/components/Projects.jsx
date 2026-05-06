@@ -16,6 +16,13 @@ const projects = [
     github: "https://github.com/EchoDoubleCharlie/doit-app",
     live: "",
   },
+  {
+    title: "QuizWave",
+    description: "A beautifully designed quiz app built with React and Vite. Features animated feedback, score tracking, progress indicators, and local storage for best score.",
+    tags: ["React", "Vite", "CSS"],
+    github: "https://github.com/EchoDoubleCharlie/quiz-app",
+    live: "",
+  },
 ];
 
 export const Projects = () => {
