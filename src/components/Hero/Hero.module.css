@@ -18,10 +18,9 @@
   right: 0;
   width: 55%;
   height: 100%;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  filter: brightness(0.45) saturate(0) contrast(1.1) grayscale(1);
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: lighten;
   z-index: 0;
 }
 
@@ -104,8 +103,9 @@
 @media (max-width: 768px) {
   .bgFace {
     width: 100%;
-    background-position: 60% top;
-    filter: brightness(0.3) saturate(0) contrast(1.1) grayscale(1);
+    object-position: 60% top;
+    opacity: 0.4;
+    mix-blend-mode: lighten;
   }
 
   .overlay {

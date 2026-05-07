@@ -6,9 +6,10 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
 
-      <div
+      <img
+        src={getImageUrl("hero/amora.jpg")}
+        alt="Al-Yashier Amora"
         className={styles.bgFace}
-        style={{ backgroundImage: `url(${getImageUrl("hero/amora.jpg")})` }}
       />
 
       <div className={styles.overlay} />
