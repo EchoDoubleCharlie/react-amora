@@ -17,16 +17,16 @@
   box-sizing: border-box;
 }
 
-.logo {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.logoMark {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logoMark:hover {
+  filter: drop-shadow(0 0 8px rgba(0, 210, 230, 0.6));
+  transform: scale(1.08);
 }
 
 .navLinks {
@@ -128,15 +128,8 @@
 }
 
 .sidebarLogo {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #ffffff 40%, #7ee8f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: flex;
+  align-items: center;
   margin-bottom: 3rem;
 }
 

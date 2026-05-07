@@ -11,7 +11,19 @@ export const Navbar = () => {
   return (
     <>
       <nav className={styles.navbar}>
-        <h1 className={styles.logo}>Amora Portfolio</h1>
+
+        <Link to="/" className={styles.logoMark} onClick={closeMenu}>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,4 36,36 4,36" fill="none" stroke="url(#grad)" strokeWidth="2.5" strokeLinejoin="round"/>
+            <line x1="10.5" y1="26" x2="29.5" y2="26" stroke="url(#grad)" strokeWidth="2.5" strokeLinecap="round"/>
+            <defs>
+              <linearGradient id="grad" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#ffffff"/>
+                <stop offset="100%" stopColor="#00d2e6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </Link>
 
         <ul className={styles.navLinks}>
           <li><Link to="/">Home</Link></li>
@@ -33,7 +45,18 @@ export const Navbar = () => {
       />
 
       <div className={`${styles.sidebar} ${isOpen ? styles.activeSidebar : ""}`}>
-        <div className={styles.sidebarLogo}>Amora Portfolio</div>
+        <div className={styles.sidebarLogo}>
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="20,4 36,36 4,36" fill="none" stroke="url(#grad2)" strokeWidth="2.5" strokeLinejoin="round"/>
+            <line x1="10.5" y1="26" x2="29.5" y2="26" stroke="url(#grad2)" strokeWidth="2.5" strokeLinecap="round"/>
+            <defs>
+              <linearGradient id="grad2" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#ffffff"/>
+                <stop offset="100%" stopColor="#00d2e6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <ul className={styles.sidebarLinks}>
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/about" onClick={closeMenu}>About Me</Link></li>

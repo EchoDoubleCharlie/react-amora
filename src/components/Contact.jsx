@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Contact.module.css";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaGithub, FaTiktok } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaGithub, FaTiktok, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
   return (
@@ -10,11 +10,10 @@ export const Contact = () => {
         Feel free to reach out if you have any questions or just want to connect!
       </p>
 
-   
       <div className={styles.contactList}>
         <div className={styles.contactItem}>
           <FaEnvelope className={styles.icon} />
-         <span className={styles.lowercase}>email: amoraalyashier00@gmail.com</span>
+          <span className={styles.lowercase}>email: amoraalyashier00@gmail.com</span>
         </div>
         <div className={styles.contactItem}>
           <FaPhone className={styles.icon} />
@@ -26,7 +25,6 @@ export const Contact = () => {
         </div>
       </div>
 
-     
       <div className={styles.socialLinks}>
         <a href="https://instagram.com/ashiernakama" target="_blank" rel="noopener noreferrer">
           <FaInstagram className={styles.instagram} />
@@ -36,6 +34,9 @@ export const Contact = () => {
         </a>
         <a href="https://www.tiktok.com/@ashier0000" target="_blank" rel="noopener noreferrer">
           <FaTiktok className={styles.tiktok} />
+        </a>
+        <a href="https://www.linkedin.com/in/al-yashier-amora-b057753b0/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className={styles.linkedin} />
         </a>
       </div>
     </section>

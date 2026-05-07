@@ -188,6 +188,10 @@
   color: #c9d1d9;
 }
 
+.linkedin {
+  color: #0a66c2;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 60px 6%;
